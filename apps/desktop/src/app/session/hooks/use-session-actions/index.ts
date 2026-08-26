@@ -814,7 +814,8 @@ export function useSessionActions({
       // gateway can be untagged, so retain the captured ambient connection too.
       // Either way, route by the composite (connection, profile), never by a
       // same-named profile alone.
-      const sessionOwner: SessionOwnerScope = ownerRoute ||
+      const sessionOwner: SessionOwnerScope =
+        ownerRoute ||
         (resolvedConnectionId
           ? {
               connectionId: resolvedConnectionId,
